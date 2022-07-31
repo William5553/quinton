@@ -1,0 +1,104 @@
+{
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "ecmaVersion": 13,
+  "extends": ["eslint:recommended", "plugin:node/recommended", "plugin:unicorn/recommended"],
+  "plugins": ["import"],
+  "rules": {
+    "unicorn/prefer-top-level-await": "off",
+    "unicorn/prefer-string-replace-all": "error",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/prefer-module": "off",
+    "unicorn/no-lonely-if": "off",
+    "unicorn/no-static-only-class": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/prefer-spread": "off",
+    "unicorn/no-nested-ternary": "off",
+    "unicorn/consistent-destructuring": "off",
+    "unicorn/no-process-exit": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "unicorn/no-array-reduce": "off",
+    "unicorn/no-array-for-each": "off",
+    "node/file-extension-in-import": ["error", "always"],
+    "node/prefer-global/buffer": ["error", "always"],
+    "node/prefer-global/console": ["error", "always"],
+    "node/prefer-global/process": ["error", "always"],
+    "node/prefer-global/url-search-params": ["error", "always"],
+    "node/prefer-global/url": ["error", "always"],
+    "node/prefer-promises/dns": "error",
+    "node/no-deprecated-api": "error",
+    "node/no-unpublished-require": "off",
+    "node/no-missing-require": "off",
+    "node/prefer-promises/fs": "off",
+    "no-multi-spaces": "error",
+    "no-process-exit": "off",
+    "no-lonely-if": "error",
+    "no-extra-parens": "warn",
+    "no-extra-semi": "warn",
+    "prefer-object-has-own": "error",
+    "no-unreachable": "error",
+    "brace-style": ["error", "1tbs"],
+    "comma-dangle": ["error", "never"],
+    "comma-spacing": "error",
+    "comma-style": "error",
+    "yoda": ["error", "never", { "exceptRange": true }],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "quotes": ["warn", "single", { "avoidEscape": true }],
+    "semi": ["warn", "always"],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "space-before-blocks": [
+      "error",
+      {
+        "functions": "always",
+        "keywords": "always",
+        "classes": "always"
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "no-restricted-globals": [
+      "error",
+      {
+        "name": "Buffer",
+        "message": "Import Buffer from `node:buffer` instead"
+      },
+      {
+        "name": "process",
+        "message": "Import process from `node:process` instead"
+      },
+      {
+        "name": "setTimeout",
+        "message": "Import setTimeout from `node:timers` instead"
+      },
+      {
+        "name": "setInterval",
+        "message": "Import setInterval from `node:timers` instead"
+      },
+      {
+        "name": "setImmediate",
+        "message": "Import setImmediate from `node:timers` instead"
+      }
+    ]
+  }
+}

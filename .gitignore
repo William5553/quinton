@@ -1,0 +1,9 @@
+node_modules/
+data/
+*.log
+*.tgz
+*.sqlite
+.npm
+.eslintcache
+.env
+.vscode
