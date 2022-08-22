@@ -10,7 +10,7 @@ specifiers:
   dotenv: ^16.0.1
   eslint: 8.22.0
   eslint-plugin-import: 2.26.0
-  eslint-plugin-n: 15.2.4
+  eslint-plugin-n: 15.2.5
   eslint-plugin-unicorn: 43.0.2
   ffmpeg-static: ^5.0.2
   node-fetch: ^3.2.10
@@ -45,7 +45,7 @@ dependencies:
 devDependencies:
   eslint: 8.22.0
   eslint-plugin-import: 2.26.0_eslint@8.22.0
-  eslint-plugin-n: 15.2.4_eslint@8.22.0
+  eslint-plugin-n: 15.2.5_eslint@8.22.0
   eslint-plugin-unicorn: 43.0.2_eslint@8.22.0
 
 packages:
@@ -480,7 +480,7 @@ packages:
     dev: false
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   /concat-stream/2.0.0:
     resolution: {integrity: sha512-MWufYdFw53ccGjCA+Ol7XJYpAlW6/prSMzuPOTRnJGcGzuhLn4Scrz7qf6o8bROZ514ltazcIFJZevcfbo0x7A==}
@@ -765,8 +765,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-n/15.2.4_eslint@8.22.0:
-    resolution: {integrity: sha512-tjnVMv2fiXYMnuiIFI8QMtyUFI42SckEEWvi8h68SWGWshfqO6SSCASy24dGMGAiy7NUk6DZt90DM0iNUsmQ5w==}
+  /eslint-plugin-n/15.2.5_eslint@8.22.0:
+    resolution: {integrity: sha512-8+BYsqiyZfpu6NXmdLOXVUfk8IocpCjpd8nMRRH0A9ulrcemhb2VI9RSJMEy5udx++A/YcVPD11zT8hpFq368g==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       eslint: '>=7.0.0'
