@@ -1,6 +1,10 @@
 import chalk from 'chalk';
+import { inspect } from 'node:util';
 
 export const log = (content, type = 'log') => {
+  if (typeof content !== 'string')
+    content = inspect(content, { depth: 2 });
+
   switch (type) {
     case 'log': 
       return console.log(`${chalk.bgBlue(type.toUpperCase())} ${content}`);
