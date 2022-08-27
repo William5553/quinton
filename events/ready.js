@@ -1,9 +1,17 @@
-import { version } from 'discord.js';
+import { version, Routes } from 'discord.js';
 import * as process from 'node:process';
 import { setInterval } from 'node:timers';
+import { REST } from '@discordjs/rest';
+
+const rest = new REST({ version: '10' }).setToken(process.env.token);
 
 export default async client => {
+  rest.put(Routes.applicationCommands(client.user.id), { body: client.commands.map(c => c.config).filter(c => c.enabled) })
+    .then(data => client.logger.log(`Registered ${data.length} commands!`))
+    .catch(client.logger.error); 
+    
   client.logger.log(`User: ${client.user.tag} (${client.user.id}) | ${client.commands.size} commands | Serving ${client.users.cache.size} users in ${client.guilds.cache.size} server${client.guilds.cache.size === 1 ? '' : 's'} | Node ${process.version} | Discord.js ${version}`, 'ready');
+
 
   client.application = await client.application?.fetch();
   if (client.owners.length === 0) client.application.team ? client.owners.push(...client.application.team.members.keys()) : client.owners.push(client.application.owner.id);

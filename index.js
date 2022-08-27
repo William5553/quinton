@@ -1,9 +1,7 @@
-import { Client, GatewayIntentBits, Partials, Collection, Routes } from 'discord.js';
+import { Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
 import * as process from 'node:process';
 import { readdir } from 'node:fs';
-import { REST } from '@discordjs/rest';
 
-import { wait } from './util/Util.js';
 import * as logger from './util/logger.js';
 
 const client = new Client({
@@ -18,7 +16,6 @@ client.owners = [];
 client.commands = new Collection();
 client.logger = logger;
 
-const rest = new REST({ version: '10' }).setToken(process.env.token);
 
 readdir('./events/', (err, files) => {
   if (err) logger.error(err);
@@ -55,13 +52,5 @@ readdir('./commands/', (err, files) => {
     client.commands.set(command.config.name, command);
   });
 });
-
-await wait(500);
-
-const commands = client.commands.map(c => c.config).filter(c => c.enabled);
-
-rest.put(Routes.applicationCommands('1012948896428867594'), { body: commands })
-  .then(() => logger.log(`Registered ${commands.length} commands!`))
-  .catch(logger.error);
 
 await client.login(process.env.token);
