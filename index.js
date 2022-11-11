@@ -1,5 +1,4 @@
 import { Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
-import * as process from 'node:process';
 import { readdir } from 'node:fs';
 
 import * as logger from './util/logger.js';

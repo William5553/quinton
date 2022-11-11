@@ -1,5 +1,4 @@
 import { version, Routes } from 'discord.js';
-import * as process from 'node:process';
 import { setInterval } from 'node:timers';
 import { REST } from '@discordjs/rest';
 

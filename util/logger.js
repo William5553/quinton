@@ -6,18 +6,24 @@ export const log = (content, type = 'log') => {
     content = inspect(content, { depth: 2 });
 
   switch (type) {
-    case 'log': 
+    case 'log': { 
       return console.log(`${chalk.bgBlue(type.toUpperCase())} ${content}`);
-    case 'warn': 
+    }
+    case 'warn': { 
       return console.log(`${chalk.black.bgYellow(type.toUpperCase())} ${content}`);
-    case 'error':
+    }
+    case 'error': {
       return console.log(`${chalk.bgRed(type.toUpperCase())} ${content}`);
-    case 'debug':
+    }
+    case 'debug': {
       return console.log(`${chalk.green(type.toUpperCase())} ${content}`);
-    case 'ready':
+    }
+    case 'ready': {
       return console.log(`${chalk.black.bgGreen(type.toUpperCase())} ${content}`);
-    default:
+    }
+    default: {
       throw new TypeError('Logger type must be either warn, debug, log, ready, or error.');
+    }
   }
 };
 
