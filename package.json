@@ -41,7 +41,6 @@
     "utf-8-validate": "^5.0.10",
     "youtube-dl-exec": "^2.1.8",
     "youtube-sr": "^4.3.4",
-    "ytdl-core": "^4.11.2",
     "zlib-sync": "^0.1.7"
   },
   "bugs": {
