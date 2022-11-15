@@ -7,7 +7,15 @@ const client = new Client({
   intents: Object.values(GatewayIntentBits).reduce((acc, p) => acc | p, 0) ?? 32_767,
   partials: [ Partials.Channel ],
   allowedMentions: { parse: ['users', 'roles'], repliedUser: true },
-  waitGuildTimeout: 5000
+  waitGuildTimeout: 5000,
+  presence: {
+    status: 'online',
+    activities: [{
+      name: '/isittuesday',
+      type: 'LISTENING',
+      url: 'https://www.github.com/William5553/quinton'
+    }]
+  }
 });
 
 client.owners = [];
