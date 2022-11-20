@@ -7,7 +7,7 @@
   "author": "William5553 <contact@williamk.ga>",
   "description": "discord bot",
   "repository": "github:William5553/quinton",
-  "packageManager": "pnpm@7.16.0",
+  "packageManager": "pnpm@7.16.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --trace-warnings -r dotenv/config index.js",
@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/William5553/quinton",
   "devDependencies": {
-    "eslint": "8.27.0",
+    "eslint": "8.28.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-n": "15.5.1",
     "eslint-plugin-unicorn": "44.0.2"

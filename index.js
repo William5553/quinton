@@ -61,3 +61,6 @@ readdir('./commands/', (err, files) => {
 });
 
 await client.login(process.env.token);
+
+process.on('uncaughtException', err => client.logger.error(`UNCAUGHT EXCEPTION:\n${err.stack ?? err}`));
+process.on('unhandledRejection', err => client.logger.error(`UNHANDLED REJECTION:\n${err.stack ?? err}`));
