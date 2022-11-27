@@ -42,7 +42,7 @@ export const execute = async (client, interaction) => {
           .addFields(
             { name: '**Input**', value: `${interaction.options.getString('text')}` },
             { name: '**From**', value: `${Object.keys(langs).find(key => langs[key] === res.from.language.iso)}`, inline: true },
-            { name: '**To**', value: `${Object.keys(langs).find(key => langs[key] === (getCode(interaction.options.getString('to')) ?? 'en'))}`, inline: true },
+            { name: '**To**', value: `${Object.keys(langs).find(key => langs[key] === getCode(interaction.options.getString('to') ?? 'en'))}`, inline: true },
             { name: '**Text**', value: `${res.text}` }
           )
           .setTimestamp()
