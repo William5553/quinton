@@ -12,7 +12,7 @@ export default async (client, interaction) => {
   } catch (error) {
     client.logger.error(error.stack ?? error);
 
-    return interaction.reply({ ephemeral: true, embeds: [
+    return interaction[interaction.deferred ? 'editReply' : 'reply']({ ephemeral: true, embeds: [
       new EmbedBuilder()
         .setColor('#FF0000')
         .setTimestamp()

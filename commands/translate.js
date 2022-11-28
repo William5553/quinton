@@ -25,7 +25,7 @@ export const config = {
       required: false
     }
   ]
-};
+}; // TODO: https://discordjs.guide/slash-commands/autocomplete.html#enabling-autocomplete
     
 export const execute = async (client, interaction) => {
   if (interaction.options.getString('from') && !isSupported(interaction.options.getString('from'))) return interaction.reply(`${interaction.options.getString('from')} isn't a supported language`);
@@ -34,10 +34,10 @@ export const execute = async (client, interaction) => {
   await interaction.deferReply();
 
   translate(interaction.options.getString('text'), { from: interaction.options.getString('from') ?? 'auto', to: interaction.options.getString('to') ?? 'en' })
-    .then(res => {
+    .then(res => 
       interaction.editReply({ embeds: [
         new EmbedBuilder()
-          .setColor(0xFF_FF_FF)
+          .setColor(0x53_90_F5)
           .setTitle('Translation')
           .addFields(
             { name: '**Input**', value: `${interaction.options.getString('text')}` },
@@ -46,7 +46,7 @@ export const execute = async (client, interaction) => {
             { name: '**Text**', value: `${res.text}` }
           )
           .setTimestamp()
-          .setFooter({ text: 'Powered by Google Translate', iconURL: 'https://www.gstatic.com/images/branding/product/1x/translate_48dp.png' })
-      ]});
-    });
+          .setFooter({ text: 'Powered by Google Translate', iconURL: 'https://www.gstatic.com/images/branding/product/1x/translate_96dp.png' })
+      ]})
+    );
 };
