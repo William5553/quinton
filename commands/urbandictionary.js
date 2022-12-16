@@ -27,7 +27,7 @@ export const execute = async (client, interaction) => {
   fetch(`http://api.urbandictionary.com/v0/define?term=${interaction.options.getString('query')}`)
     .then(res => res.json())
     .then(body => {
-      if (body.list.length === 0) return interaction.reply('Could not find any results');
+      if (body.list.length === 0) return interaction.editReply('Could not find any results');
 
       const data = body.list[interaction.options.getInteger('result') ? Math.min(body.list.length - 1, Math.max(0, interaction.options.getInteger('result') - 1)) : 0];
     
