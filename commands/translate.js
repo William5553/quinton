@@ -33,8 +33,8 @@ export const execute = async (client, interaction) => {
 
   await interaction.deferReply();
 
-  translate(interaction.options.getString('text'), { from: interaction.options.getString('from') ?? 'auto', to: interaction.options.getString('to') ?? 'en' })
-    .then(res => 
+  translate(interaction.options.getString('text'), { from: interaction.options.getString('from'), to: interaction.options.getString('to') })
+    .then(res =>
       interaction.editReply({ embeds: [
         new EmbedBuilder()
           .setColor(0x53_90_F5)
