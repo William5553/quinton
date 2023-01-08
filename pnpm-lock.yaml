@@ -12,7 +12,7 @@ specifiers:
   eslint-plugin-n: 15.6.0
   eslint-plugin-unicorn: 45.0.2
   node-fetch: ^3.3.0
-  utf-8-validate: ^5.0.10
+  utf-8-validate: ^6.0.0
   zlib-sync: ^0.1.7
 
 dependencies:
@@ -20,10 +20,10 @@ dependencies:
   '@william5553/translate-google-api': 3.1.0
   bufferutil: 4.0.7
   chalk: 5.2.0
-  discord.js: 14.7.1_3cxu5zja4e2r5wmvge7mdcljwq
+  discord.js: 14.7.1_b534fhs3xgzvdbz5qzlfkrhjjm
   dotenv: 16.0.3
   node-fetch: 3.3.0
-  utf-8-validate: 5.0.10
+  utf-8-validate: 6.0.0
   zlib-sync: 0.1.7
 
 devDependencies:
@@ -450,7 +450,7 @@ packages:
     resolution: {integrity: sha512-xZT6qosExE1ziBgD8vYU2R2aQQKOrSYWI6AFq5CiYhQtwR+Nkt9gPA3v9kHj2RFnsWDI2AbtESiQ4Rrhsa06+Q==}
     dev: false
 
-  /discord.js/14.7.1_3cxu5zja4e2r5wmvge7mdcljwq:
+  /discord.js/14.7.1_b534fhs3xgzvdbz5qzlfkrhjjm:
     resolution: {integrity: sha512-1FECvqJJjjeYcjSm0IGMnPxLqja/pmG1B0W2l3lUY2Gi4KXiyTeQmU1IxWcbXHn2k+ytP587mMWqva2IA87EbA==}
     engines: {node: '>=16.9.0'}
     dependencies:
@@ -465,7 +465,7 @@ packages:
       lodash.snakecase: 4.1.1
       tslib: 2.4.1
       undici: 5.14.0
-      ws: 8.12.0_3cxu5zja4e2r5wmvge7mdcljwq
+      ws: 8.12.0_b534fhs3xgzvdbz5qzlfkrhjjm
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -1810,8 +1810,8 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /utf-8-validate/5.0.10:
-    resolution: {integrity: sha512-Z6czzLq4u8fPOyx7TU6X3dvUZVvoJmxSQ+IcrlmagKhilxlhZgxPK6C5Jqbkw1IDUmFTM+cz9QDnnLTwDz/2gQ==}
+  /utf-8-validate/6.0.0:
+    resolution: {integrity: sha512-OCJuwxQsnG51swYmNloViggxNOFO/leOZpnb/vVeoastJbrzrZZU7lGsYlUcdkCl9nsBu2nkKLjpljb3Ckvb/Q==}
     engines: {node: '>=6.14.2'}
     requiresBuild: true
     dependencies:
@@ -1873,7 +1873,7 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /ws/8.12.0_3cxu5zja4e2r5wmvge7mdcljwq:
+  /ws/8.12.0_b534fhs3xgzvdbz5qzlfkrhjjm:
     resolution: {integrity: sha512-kU62emKIdKVeEIOIKVegvqpXMSTAMLJozpHZaJNDYqBjzlSYXQGviYwN1osDLJ9av68qHd4a2oSjd7yD4pacig==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -1886,7 +1886,7 @@ packages:
         optional: true
     dependencies:
       bufferutil: 4.0.7
-      utf-8-validate: 5.0.10
+      utf-8-validate: 6.0.0
     dev: false
 
   /yallist/4.0.0:
