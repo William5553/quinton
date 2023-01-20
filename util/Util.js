@@ -4,6 +4,7 @@ import { ActionRowBuilder, ButtonBuilder, ButtonStyle, BaseInteraction } from 'd
 export { setTimeout as wait } from 'node:timers/promises';
 export const randomItem = array => array[Math.floor(Math.random() * array.length)];
 export const require = createRequire(import.meta.url);
+export const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 export const splitMessage = (content, options = {}) => {
   const maxLength = options.maxLength ?? 2000;
   const char = options.char ?? '\n';

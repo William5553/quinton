@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import { ApplicationCommandOptionType, EmbedBuilder } from 'discord.js';
+import { clamp } from '../util/Util.js';
 
 export const config = {
   name: 'urbandictionary',
@@ -24,12 +25,15 @@ export const config = {
 export const execute = async (client, interaction) => {
   await interaction.deferReply();
 
-  fetch(`http://api.urbandictionary.com/v0/define?term=${interaction.options.getString('query')}`)
+  const query = interaction.options.getString('query');
+  const result = interaction.options.getInteger('result');
+
+  fetch(`http://api.urbandictionary.com/v0/define?term=${query}`)
     .then(res => res.json())
     .then(body => {
       if (body.list.length === 0) return interaction.editReply('Could not find any results');
 
-      const data = body.list[interaction.options.getInteger('result') ? Math.min(body.list.length - 1, Math.max(0, interaction.options.getInteger('result') - 1)) : 0];
+      const data = body.list[result ? clamp(result - 1, 0, body.list.length - 1) : 0];
     
       return interaction.editReply({ embeds: [
         new EmbedBuilder()
