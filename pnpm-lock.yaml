@@ -13,7 +13,7 @@ specifiers:
   eslint-plugin-unicorn: 45.0.2
   genius-lyrics: ^4.4.2
   node-fetch: ^3.3.0
-  utf-8-validate: ^6.0.0
+  utf-8-validate: ^6.0.1
   zlib-sync: ^0.1.7
 
 dependencies:
@@ -21,11 +21,11 @@ dependencies:
   '@william5553/translate-google-api': 3.1.0
   bufferutil: 4.0.7
   chalk: 5.2.0
-  discord.js: 14.7.1_b534fhs3xgzvdbz5qzlfkrhjjm
+  discord.js: 14.7.1_5olvw5zq3du33zho6srrfwyey4
   dotenv: 16.0.3
   genius-lyrics: 4.4.2
   node-fetch: 3.3.0
-  utf-8-validate: 6.0.0
+  utf-8-validate: 6.0.1
   zlib-sync: 0.1.7
 
 devDependencies:
@@ -85,7 +85,7 @@ packages:
       discord-api-types: 0.37.28
       file-type: 18.2.0
       tslib: 2.4.1
-      undici: 5.15.1
+      undici: 5.15.2
     dev: false
 
   /@discordjs/util/0.1.0:
@@ -494,7 +494,7 @@ packages:
     resolution: {integrity: sha512-K0fw7m7km9th3dCQ2AR90q/FwX3uAj+OLc+Zuo39VY9vCn0Ux/iObM4y1zJYIH3vTc+QlrksVErUvyeONjOKMQ==}
     dev: false
 
-  /discord.js/14.7.1_b534fhs3xgzvdbz5qzlfkrhjjm:
+  /discord.js/14.7.1_5olvw5zq3du33zho6srrfwyey4:
     resolution: {integrity: sha512-1FECvqJJjjeYcjSm0IGMnPxLqja/pmG1B0W2l3lUY2Gi4KXiyTeQmU1IxWcbXHn2k+ytP587mMWqva2IA87EbA==}
     engines: {node: '>=16.9.0'}
     dependencies:
@@ -508,8 +508,8 @@ packages:
       fast-deep-equal: 3.1.3
       lodash.snakecase: 4.1.1
       tslib: 2.4.1
-      undici: 5.15.1
-      ws: 8.12.0_b534fhs3xgzvdbz5qzlfkrhjjm
+      undici: 5.15.2
+      ws: 8.12.0_5olvw5zq3du33zho6srrfwyey4
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -997,7 +997,7 @@ packages:
     resolution: {integrity: sha512-1+wHLAlaNOZWDNKpoYfiveodwDSgS0645Nox6ltb+yCmLdxdTDbhI8lKmJkn9ZRHStqO+MOdhtw6K+QeIIwN0w==}
     dependencies:
       cheerio: 1.0.0-rc.12
-      undici: 5.15.1
+      undici: 5.15.2
     dev: false
 
   /get-intrinsic/1.2.0:
@@ -1913,8 +1913,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /undici/5.15.1:
-    resolution: {integrity: sha512-XLk8g0WAngdvFqTI+VKfBtM4YWXgdxkf1WezC771Es0Dd+Pm1KmNx8t93WTC+Hh9tnghmVxkclU1HN+j+CvIUA==}
+  /undici/5.15.2:
+    resolution: {integrity: sha512-JsN6meyJESMJaLqOuozstwrolSkLWlTIT4qpGoKepNdnZy7HJMPKB0v0Td/CepGgoiPpUSvVO9Nh/5N9QrmDgQ==}
     engines: {node: '>=12.18'}
     dependencies:
       busboy: 1.6.0
@@ -1926,8 +1926,8 @@ packages:
       punycode: 2.3.0
     dev: true
 
-  /utf-8-validate/6.0.0:
-    resolution: {integrity: sha512-OCJuwxQsnG51swYmNloViggxNOFO/leOZpnb/vVeoastJbrzrZZU7lGsYlUcdkCl9nsBu2nkKLjpljb3Ckvb/Q==}
+  /utf-8-validate/6.0.1:
+    resolution: {integrity: sha512-gAZEa1DMXeBiHEwxef81kLtZjBrC1hib7UWnsvMVtxY8oJGtDSXt9McWu2D6V/xgrjbfRBsS5UIGEUBg2SrAsg==}
     engines: {node: '>=6.14.2'}
     requiresBuild: true
     dependencies:
@@ -1989,7 +1989,7 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /ws/8.12.0_b534fhs3xgzvdbz5qzlfkrhjjm:
+  /ws/8.12.0_5olvw5zq3du33zho6srrfwyey4:
     resolution: {integrity: sha512-kU62emKIdKVeEIOIKVegvqpXMSTAMLJozpHZaJNDYqBjzlSYXQGviYwN1osDLJ9av68qHd4a2oSjd7yD4pacig==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -2002,7 +2002,7 @@ packages:
         optional: true
     dependencies:
       bufferutil: 4.0.7
-      utf-8-validate: 6.0.0
+      utf-8-validate: 6.0.1
     dev: false
 
   /yallist/4.0.0:

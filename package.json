@@ -33,7 +33,7 @@
     "dotenv": "^16.0.3",
     "genius-lyrics": "^4.4.2",
     "node-fetch": "^3.3.0",
-    "utf-8-validate": "^6.0.0",
+    "utf-8-validate": "^6.0.1",
     "zlib-sync": "^0.1.7"
   },
   "bugs": {

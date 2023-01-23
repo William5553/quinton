@@ -40,10 +40,11 @@ export const execute = async (client, interaction) => {
           .setColor(0x53_90_F5)
           .setTitle('Translation')
           .addFields(
-            { name: '**Input**', value: `${interaction.options.getString('text')}` },
+            { name: '**Input**', value: `${interaction.options.getString('text')}`, inline: true },
+            { name: '**Text**', value: `${res.text}`, inline: true },
+            { name: '\n', value: '\n' },
             { name: '**From**', value: `${Object.keys(langs).find(key => langs[key] === res.from.language.iso)}`, inline: true },
-            { name: '**To**', value: `${Object.keys(langs).find(key => langs[key] === getCode(interaction.options.getString('to') ?? 'en'))}`, inline: true },
-            { name: '**Text**', value: `${res.text}` }
+            { name: '**To**', value: `${Object.keys(langs).find(key => langs[key] === getCode(interaction.options.getString('to') ?? 'en'))}`, inline: true }
           )
           .setTimestamp()
           .setFooter({ text: 'Powered by Google Translate', iconURL: 'https://www.gstatic.com/images/branding/product/1x/translate_96dp.png' })
