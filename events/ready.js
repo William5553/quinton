@@ -1,6 +1,5 @@
-import { version, Routes } from 'discord.js';
+import { version, Routes, REST } from 'discord.js';
 import { setInterval } from 'node:timers';
-import { REST } from '@discordjs/rest';
 
 const rest = new REST({ version: '10' }).setToken(process.env.token);
 
