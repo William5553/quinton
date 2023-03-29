@@ -8,7 +8,7 @@ specifiers:
   dotenv: ^16.0.3
   eslint: 8.34.0
   eslint-plugin-import: 2.27.5
-  eslint-plugin-n: 15.6.1
+  eslint-plugin-n: 15.7.0
   eslint-plugin-unicorn: 45.0.2
   genius-lyrics: ^4.4.3
   node-fetch: ^3.3.0
@@ -29,7 +29,7 @@ dependencies:
 devDependencies:
   eslint: 8.34.0
   eslint-plugin-import: 2.27.5_eslint@8.34.0
-  eslint-plugin-n: 15.6.1_eslint@8.34.0
+  eslint-plugin-n: 15.7.0_eslint@8.34.0
   eslint-plugin-unicorn: 45.0.2_eslint@8.34.0
 
 packages:
@@ -724,8 +724,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-n/15.6.1_eslint@8.34.0:
-    resolution: {integrity: sha512-R9xw9OtCRxxaxaszTQmQAlPgM+RdGjaL1akWuY/Fv9fRAi8Wj4CUKc6iYVG8QNRjRuo8/BqVYIpfqberJUEacA==}
+  /eslint-plugin-n/15.7.0_eslint@8.34.0:
+    resolution: {integrity: sha512-jDex9s7D/Qial8AGVIHq4W7NswpUD5DPDL2RH8Lzd9EloWUuvUkHfv4FRLMipH5q2UtyurorBkPeNi1wVWNh3Q==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       eslint: '>=7.0.0'
