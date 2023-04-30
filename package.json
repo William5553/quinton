@@ -7,7 +7,7 @@
   "author": "William5553 <contact@williamk.ga>",
   "description": "discord bot",
   "repository": "github:William5553/quinton",
-  "packageManager": "pnpm@7.27.1",
+  "packageManager": "pnpm@8.3.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --trace-warnings -r dotenv/config index.js",
@@ -28,11 +28,11 @@
     "@william5553/translate-google-api": "^3.1.0",
     "bufferutil": "^4.0.7",
     "chalk": "^5.2.0",
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.9.0",
     "dotenv": "^16.0.3",
     "genius-lyrics": "^4.4.3",
-    "node-fetch": "^3.3.0",
-    "utf-8-validate": "^6.0.2",
+    "node-fetch": "^3.3.1",
+    "utf-8-validate": "^6.0.3",
     "zlib-sync": "^0.1.8"
   },
   "bugs": {
@@ -40,9 +40,9 @@
   },
   "homepage": "https://github.com/William5553/quinton",
   "devDependencies": {
-    "eslint": "8.34.0",
+    "eslint": "8.39.0",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-n": "15.6.1",
-    "eslint-plugin-unicorn": "45.0.2"
+    "eslint-plugin-n": "15.7.0",
+    "eslint-plugin-unicorn": "46.0.0"
   }
 }
