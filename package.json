@@ -7,7 +7,7 @@
   "author": "William5553 <contact@williamk.ga>",
   "description": "discord bot",
   "repository": "github:William5553/quinton",
-  "packageManager": "pnpm@8.3.1",
+  "packageManager": "pnpm@8.5.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --trace-warnings -r dotenv/config index.js",
@@ -28,7 +28,7 @@
     "@william5553/translate-google-api": "^3.1.0",
     "bufferutil": "^4.0.7",
     "chalk": "^5.2.0",
-    "discord.js": "^14.9.0",
+    "discord.js": "^14.11.0",
     "dotenv": "^16.0.3",
     "genius-lyrics": "^4.4.3",
     "node-fetch": "^3.3.1",
