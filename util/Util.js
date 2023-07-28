@@ -22,7 +22,7 @@ export const splitMessage = (content, options = {}) => {
     }
     msg += (msg && piece !== '' ? char : '') + piece;
   }
-  return messages.concat(prepend + msg + append);
+  return [...messages, prepend + msg + append];
 };
 
 export const confirm = async (interaction, author, time = 30_000) => {

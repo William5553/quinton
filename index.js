@@ -1,5 +1,5 @@
-import { Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
 import { readdir } from 'node:fs';
+import { Client, GatewayIntentBits, Partials, Collection } from 'discord.js';
 
 import * as logger from './util/logger.js';
 
@@ -24,10 +24,10 @@ client.commands = new Collection();
 client.logger = logger;
 
 
-readdir('./events/', (err, files) => {
+readdir('./events/', async (err, files) => {
   if (err) logger.error(err);
   logger.log(`Loading a total of ${files.length} events.`);
-  files.forEach(async file => {
+  for (const file of files) {
     if (!file.endsWith('.js'))
       return logger.warn(`File not ending with .js found in events folder: ${file}`);
     const eventName = file.split('.')[0];
@@ -35,14 +35,14 @@ readdir('./events/', (err, files) => {
     const event = await import(`./events/${file}`);
     // Bind the client to any event, before the existing arguments provided by the discord.js event
     client.on(eventName, event.default.bind(undefined, client));
-  });
+  }
 });
 
-readdir('./commands/', (err, files) => {
+readdir('./commands/', async (err, files) => {
   if (err) logger.error(err);
   logger.log(`Loading a total of ${files.length} commands.`);
 
-  files.forEach(async file => {
+  for (const file of files) {
     if (!file.endsWith('.js'))
       return logger.warn(`File not ending with .js found in commands folder: ${file}`);
 
@@ -57,7 +57,7 @@ readdir('./commands/', (err, files) => {
       return logger.warn(`File name ${command} has a different command name ${command.config.name}`);
 
     client.commands.set(command.config.name, command);
-  });
+  }
 });
 
 await client.login(process.env.token);
